@@ -1,0 +1,10 @@
+{
+  "name": "Velmora",
+  "description": "A privacy-first menstrual health and cycle wellness web application with local-first IndexedDB storage, cycle predictions, health alerts, clinic finder, and clinical reports.",
+  "requestFramePermissions": [
+    "geolocation"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

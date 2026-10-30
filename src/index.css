@@ -1,0 +1,85 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --velmora-bg: #FFF0F5;
+    --velmora-surface: #FFFFFF;
+    --velmora-surface-soft: #F8C8DC;
+    --velmora-border: #F1D5D8;
+    --velmora-highlight: #FFB6C1;
+    --velmora-accent: #FB6F92;
+    --velmora-primary: #A4365A;
+    --velmora-primary-hover: #8A2B49;
+    --velmora-text-main: #392332;
+    --velmora-text-muted: #725B69;
+  }
+
+  body {
+    background-color: #FFF0F5;
+    color: #392332;
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  }
+
+  h1, h2, h3, .font-display {
+    font-family: 'Outfit', 'Plus Jakarta Sans', sans-serif;
+  }
+}
+
+/* Custom utility colors */
+.bg-velmora-bg { background-color: #FFF0F5; }
+.bg-velmora-surface { background-color: #FFFFFF; }
+.bg-velmora-soft { background-color: #F8C8DC; }
+.bg-velmora-primary { background-color: #A4365A; }
+.bg-velmora-primary:hover { background-color: #8A2B49; }
+.bg-velmora-accent { background-color: #FB6F92; }
+
+.text-velmora-main { color: #392332; }
+.text-velmora-muted { color: #725B69; }
+.text-velmora-primary { color: #A4365A; }
+.text-velmora-accent { color: #FB6F92; }
+
+.border-velmora { border-color: #F1D5D8; }
+.border-velmora-soft { border-color: #F8C8DC; }
+.border-velmora-primary { border-color: #A4365A; }
+
+/* Focus visible styling */
+button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
+  outline: 2px solid #A4365A;
+  outline-offset: 2px;
+}
+
+/* Leaflet map styles */
+.leaflet-container {
+  font-family: 'Plus Jakarta Sans', sans-serif !important;
+  border-radius: 1rem;
+  z-index: 10;
+}
+.leaflet-popup-content-wrapper {
+  border-radius: 0.75rem !important;
+  box-shadow: 0 4px 14px rgba(57, 35, 50, 0.12) !important;
+  border: 1px solid #F1D5D8 !important;
+}
+
+/* Print styles for clinical reports */
+@media print {
+  body {
+    background: #FFFFFF !important;
+    color: #000000 !important;
+  }
+  .no-print, header, nav, aside, .bottom-nav, button.print-hide {
+    display: none !important;
+  }
+  .print-only {
+    display: block !important;
+  }
+  .report-container {
+    padding: 0 !important;
+    margin: 0 !important;
+    box-shadow: none !important;
+    border: none !important;
+    width: 100% !important;
+  }
+  .page-break {
+    page-break-after: always;
+  }
+}
